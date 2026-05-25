@@ -1,0 +1,325 @@
+﻿```css
+/* =========================================
+   NETFLIX CLONE FULL CSS
+========================================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial;
+}
+
+body {
+    background: #000;
+    color: white;
+    overflow-x: hidden;
+}
+
+/* NAVBAR */
+
+nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    padding: 20px 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(0,0,0,0.8);
+    z-index: 1000;
+    backdrop-filter: blur(5px);
+}
+
+.logo {
+    color: red;
+    font-size: 50px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    margin-left: 25px;
+    font-size: 18px;
+    transition: 0.3s;
+    font-weight: bold;
+}
+
+    .nav-links a:hover {
+        color: red;
+    }
+
+/* HERO SECTION */
+
+.hero {
+    height: 100vh;
+    background: linear-gradient(to top, rgba(0,0,0,0.95), rgba(0,0,0,0.5)), url('https://images.unsplash.com/photo-1489599849927-2ee91cede3ba?q=80&w=1600&auto=format&fit=crop');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    padding-left: 80px;
+}
+
+.hero-content {
+    max-width: 700px;
+}
+
+    .hero-content h1 {
+        font-size: 80px;
+        line-height: 90px;
+        margin-bottom: 20px;
+    }
+
+    .hero-content p {
+        font-size: 28px;
+        margin-top: 20px;
+        color: #ddd;
+    }
+
+.hero-btn {
+    display: inline-block;
+    margin-top: 35px;
+    background: red;
+    color: white;
+    padding: 16px 40px;
+    text-decoration: none;
+    border-radius: 6px;
+    font-size: 22px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+    .hero-btn:hover {
+        background: #c70000;
+        transform: scale(1.05);
+    }
+
+/* MOVIES */
+
+.movies {
+    padding: 50px 60px;
+}
+
+    .movies h2 {
+        margin-bottom: 25px;
+        font-size: 40px;
+    }
+
+.movie-row {
+    display: flex;
+    gap: 20px;
+    overflow-x: auto;
+    padding-bottom: 20px;
+    scrollbar-width: none;
+}
+
+    .movie-row::-webkit-scrollbar {
+        display: none;
+    }
+
+    .movie-row img {
+        width: 320px;
+        height: 200px;
+        object-fit: cover;
+        border-radius: 12px;
+        transition: 0.4s;
+        box-shadow: 0 0 10px rgba(255,0,0,0.3);
+    }
+
+        .movie-row img:hover {
+            transform: scale(1.08);
+            box-shadow: 0 0 20px red;
+        }
+
+/* FOOTER */
+
+footer {
+    text-align: center;
+    padding: 50px;
+    background: #111;
+    margin-top: 50px;
+}
+
+    footer h2 {
+        color: red;
+        margin-bottom: 15px;
+        font-size: 40px;
+    }
+
+    footer p {
+        margin-top: 10px;
+        color: #ccc;
+    }
+
+/* SIGN IN / SIGN UP */
+
+.signin-page {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(to top, rgba(0,0,0,0.85), rgba(0,0,0,0.7)), url('https://images.unsplash.com/photo-1489599849927-2ee91cede3ba?q=80&w=1600&auto=format&fit=crop');
+    background-size: cover;
+    background-position: center;
+}
+
+.signin-box {
+    background: rgba(0,0,0,0.85);
+    padding: 50px;
+    width: 420px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 0 20px rgba(255,0,0,0.4);
+}
+
+    .signin-box h1 {
+        margin-bottom: 30px;
+        font-size: 42px;
+        text-align: center;
+    }
+
+    .signin-box input {
+        margin-bottom: 20px;
+        padding: 15px;
+        border: none;
+        border-radius: 5px;
+        font-size: 17px;
+        outline: none;
+    }
+
+    .signin-box button {
+        padding: 15px;
+        background: red;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        font-size: 18px;
+        font-weight: bold;
+        cursor: pointer;
+        transition: 0.3s;
+    }
+
+        .signin-box button:hover {
+            background: #c70000;
+            transform: scale(1.03);
+        }
+
+    .signin-box p {
+        margin-top: 20px;
+        text-align: center;
+        color: #ccc;
+    }
+
+    .signin-box a {
+        color: red;
+        text-decoration: none;
+        font-weight: bold;
+    }
+
+/* SUCCESS MESSAGE */
+
+.success-msg {
+    margin-top: 20px;
+    background: green;
+    padding: 12px;
+    text-align: center;
+    border-radius: 5px;
+    display: none;
+}
+
+/* ABOUT PAGE */
+
+.about-section {
+    min-height: 100vh;
+    padding: 140px 80px;
+    background: linear-gradient(to top, rgba(0,0,0,0.9), rgba(0,0,0,0.7)), url('https://images.unsplash.com/photo-1517604931442-7e0c8ed2963c?q=80&w=1600&auto=format&fit=crop');
+    background-size: cover;
+}
+
+.about-box {
+    max-width: 900px;
+    background: rgba(0,0,0,0.75);
+    padding: 50px;
+    border-radius: 12px;
+    box-shadow: 0 0 20px rgba(255,0,0,0.3);
+}
+
+    .about-box h1 {
+        font-size: 60px;
+        margin-bottom: 25px;
+        color: red;
+    }
+
+    .about-box p {
+        font-size: 22px;
+        line-height: 40px;
+        color: #ddd;
+    }
+
+/* MOVIE PLAYER PAGE */
+
+.movie-player {
+    min-height: 100vh;
+    background: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+    .movie-player img {
+        width: 80%;
+        border-radius: 15px;
+        box-shadow: 0 0 20px red;
+    }
+
+    .movie-player h1 {
+        margin-bottom: 30px;
+        font-size: 50px;
+        color: red;
+    }
+
+/* RESPONSIVE */
+
+@media(max-width: 768px) {
+
+    nav {
+        padding: 20px;
+    }
+
+    .logo {
+        font-size: 35px;
+    }
+
+    .hero {
+        padding-left: 30px;
+    }
+
+    .hero-content h1 {
+        font-size: 50px;
+        line-height: 60px;
+    }
+
+    .hero-content p {
+        font-size: 20px;
+    }
+
+    .movie-row img {
+        width: 250px;
+        height: 160px;
+    }
+
+    .about-box h1 {
+        font-size: 40px;
+    }
+
+    .about-box p {
+        font-size: 18px;
+        line-height: 30px;
+    }
+}
+
+```
